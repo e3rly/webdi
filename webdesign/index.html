@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CG 없는 영화의 미학 — Reality is the New Magic</title>
+  <meta name="description" content="실물 효과와 착시로 현실의 감정을 되찾은 영화들: 반지의 제왕, 인셉션, 매드맥스, 오펜하이머 사례로 보는 리얼리즘의 미학" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Noto+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 고정 헤더 -->
+  <header class="site-header">
+    <a href="#intro" class="brand">Cinematic Realism</a>
+    <nav class="nav">
+      <a href="#why-real">왜 진짜인가</a>
+      <a href="#lotr">반지의 제왕</a>
+      <a href="#cases">더 많은 사례</a>
+      <a href="#emotion">감정의 리얼리즘</a>
+      <a href="#credits">크레딧</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="intro" class="hero section" style="--hero:url('https://images.pexels.com/photos/7991380/pexels-photo-7991380.jpeg');">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <h1 class="title reveal">CG 없는 영화의 미학</h1>
+      <p class="subtitle reveal delay-1">Reality is the new special effect.</p>
+      <a href="#why-real" class="btn btn--gold reveal delay-2">시작하기</a>
+    </div>
+  </section>
+
+  <!-- 왜 진짜인가 -->
+  <section id="why-real" class="section section--dark">
+    <div class="container grid-2">
+      <div class="stack reveal">
+        <h2 class="section-title">왜 사람들은 ‘진짜’를 원하는가</h2>
+        <p class="body">
+          VFX는 현실을 <em>재현</em>하지만, 실물 효과는 현실을 <em>존재</em>시킨다. 관객의 지각은
+          픽셀의 완벽함보다 <strong>빛의 난반사, 공기의 미세한 입자, 배우가 실제 공간에 남기는 흔적</strong>에
+          감정적으로 반응한다. CG가 과잉되면 ‘언캐니 밸리’가 발생해 감정이입이 끊기고, 카메라가 포착한
+          실제 물리현상은 오히려 상상력을 해방한다.
+        </p>
+        <p class="body">
+          결국 문제는 기술의 유무가 아니라 <strong>지각의 설득</strong>이다. 실물 효과는 관객의 감각을
+          일차적으로 자극하고, CG는 그 위에 세계를 확장한다. 현대 영화는 이 둘의 균형점을 다시 모색 중이다.
+        </p>
+      </div>
+      <figure class="card photo reveal delay-1">
+        <img src="https://images.pexels.com/photos/53265/pexels-photo-53265.jpeg" alt="실제 조명과 그림자가 만드는 표면 질감" />
+        <figcaption>조명·그림자·입자의 우연성 — 스튜디오가 만들 수 없는 불규칙성이 실재감을 만든다.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 반지의 제왕 -->
+  <section id="lotr" class="section">
+    <div class="container">
+      <h2 class="section-title center reveal">반지의 제왕: 착시의 엔지니어링</h2>
+      <p class="center body narrow reveal delay-1">
+        <strong>강제 원근(Forced Perspective)</strong>은 동일 프레임 안에서 피사체 간 거리·각도를 교란해
+        크기 차가 있는 것처럼 보이게 하는 고전적 기법이다. 피터 잭슨은 세트와 소도구의 치수를 달리 제작하고,
+        카메라와 배우의 동선을 <em>달리(dolly)</em>에 맞춰 동기화해 착시의 연속성을 확보했다.
+      </p>
+
+      <div class="grid-2 lotr-diagram">
+        <figure class="card photo reveal">
+          <!-- 네 레포에 images/lotr_set.jpg 업로드 필요 -->
+          <img src="images/lotr_set.jpg" alt="강제 원근을 위한 특수 테이블/세트" />
+          <figcaption>같은 테이블처럼 보이지만, 실제로는 기울기·깊이가 다르다.</figcaption>
+        </figure>
+        <div class="stack reveal delay-1">
+          <h3 class="h3">착시가 무너지지 않게 하는 4가지 조건</h3>
+          <ul class="list">
+            <li><strong>세트 설계:</strong> 테이블·의자·소품의 비례를 다르게 제작</li>
+            <li><strong>카메라 고정:</strong> 미세한 각도 변화도 착시를 깨므로 렌즈·높이 고정</li>
+            <li><strong>동시 이동:</strong> 배우와 카메라를 함께 이동시켜 프레임 내 비율 유지</li>
+            <li><strong>피사계 심도:</strong> 과도한 얕은 심도는 속임수를 드러내므로 심도/조리개 관리</li>
+          </ul>
+
+          <div class="tip">아래 버튼으로 간단한 원근 데모를 확인해 보세요.</div>
+          <button class="btn btn--outline" data-demo-btn>강제 원근 데모</button>
+          <div class="demo-wrap" hidden>
+            <img src="https://www.adobe.com/kr/creativecloud/photography/discover/media_1a229e21b6b117035014d7eeea79aab8ba83280c0.png?width=750&format=png&optimize=medium" alt="가까운 피사체" class="demo demo--near">
+            <img src="https://media.istockphoto.com/id/1213562648/photo/young-travellers-at-uyuni-salt-flats-in-bolivia-south-america-forced-perspective.jpg?s=612x612&w=0&k=20&c=ZqROV1rUcGxfBpjoaA1PtqncIol3WENDw1q4NhzX4wY=" alt="멀리 있는 피사체" class="demo demo--far">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 더 많은 사례 -->
+  <section id="cases" class="section section--dark">
+    <div class="container">
+      <h2 class="section-title center reveal">실제 효과를 택한 영화들</h2>
+
+      <div class="cards">
+        <article class="card feature reveal">
+          <img src="https://www.indiewire.com/wp-content/uploads/2015/08/inception.jpg" alt="인셉션 회전 복도 세트" />
+          <div class="feature__content">
+            <h3 class="h3">인셉션 — 회전 복도</h3>
+            <p class="body">
+              중력을 CG로 합성하는 대신 <em>360° 회전하는 복도 세트</em>를 제작. 배우의 균형 붕괴, 소도구의 낙하,
+              벽면의 마찰음까지 카메라가 직접 포착한다. 관객은 ‘보정된 장면’이 아닌 ‘발생한 사건’을 체험한다.
+            </p>
+          </div>
+        </article>
+
+        <article class="card feature reveal delay-1">
+          <img src="https://www.hollywoodreporter.com/wp-content/uploads/2016/02/mmfr-trl-87423.jpg" alt="매드맥스 분노의 도로 실물 스턴트" />
+          <div class="feature__content">
+            <h3 class="h3">매드맥스 — 실물 스턴트</h3>
+            <p class="body">
+              폭발과 카 체이싱을 실물로 촬영. 모래먼지의 난류, 광원 플레어, 차체의 비탄성 변형이
+              프레임에 각인된다. 위험의 물리성은 서사적 긴장을 직접 증폭한다.
+            </p>
+          </div>
+        </article>
+
+        <article class="card feature reveal delay-2">
+          <img src="https://www.dexerto.com/cdn-image/wp-content/uploads/2023/07/24/oppenheimer-nuke-explosion.jpg?width=1200&quality=60&format=auto" alt="오펜하이머의 실제 효과 실험" />
+          <div class="feature__content">
+            <h3 class="h3">오펜하이머 — 물리 실험 기반 이미지</h3>
+            <p class="body">
+              핵 반응 이미지를 <em>미니어처·화학 반응·광학 실험</em>으로 시각화. 픽셀 합성 대신
+              <strong>현상 자체</strong>를 기록해 추상과 사실의 경계를 넘나든다.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 감정의 리얼리즘 -->
+  <section id="emotion" class="section section--edge">
+    <div class="container narrow center">
+      <h2 class="section-title reveal">기술이 아닌 감정의 리얼리즘</h2>
+      <p class="lead reveal delay-1">
+        실물 효과는 관객의 감각을 일차적으로 자극한다. 뇌는 <em>우연·잡음·불완전성</em>을 현실의 지표로 해석한다.
+        그래서 실물의 작은 어긋남이 CG의 완벽함보다 <strong>두려움·경이·긴장</strong>을 더 진하게 만든다.
+      </p>
+      <blockquote class="quote reveal delay-2">
+        “Reality is the new special effect.”
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 크레딧 -->
+  <footer id="credits" class="footer">
+    <div class="container">
+      <p class="small">
+        제작: (이름) • 과목: 웹디자인 • 주제: CG 없는 영화의 미학<br/>
+        이미지: 제공 링크/스틸컷 저작권 표기 영역 • 디자인 테마: 다크(블랙) 시네마틱
+      </p>
+    </div>
+  </footer>
+
+  <button class="to-top" aria-label="맨 위로">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>

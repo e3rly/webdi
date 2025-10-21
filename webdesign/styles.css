@@ -1,0 +1,123 @@
+:root{
+  --bg:#000;          /* 완전 블랙 배경 */
+  --bg-2:#0e0e0e;     /* 섹션 구분용 다크 그레이 */
+  --text:#f5f5f5;
+  --muted:#bdbdbd;
+  --gold:#d4af37;     /* 포인트 컬러(골드) */
+  --card:#141414;
+  --max:1100px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Noto Sans KR", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  line-height:1.65;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
+}
+
+.container{width:min(92%, var(--max)); margin:0 auto}
+.section{padding:96px 0}
+.section--dark{background:var(--bg-2)}
+.section--edge{background:linear-gradient(180deg, rgba(212,175,55,0.08), transparent 60%)}
+
+.center{text-align:center}
+.narrow{max-width:760px; margin-inline:auto}
+
+.site-header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(1.2) blur(8px);
+  background:rgba(0,0,0,0.4);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:12px 4%;
+}
+.brand{color:var(--gold); font-weight:800; text-decoration:none; letter-spacing:.2px}
+.nav a{color:var(--text); text-decoration:none; margin-left:16px; font-size:14px; opacity:.85}
+.nav a:hover{color:var(--gold)}
+
+.hero{
+  position:relative; min-height:92vh; display:grid; place-items:center;
+  background: #000;
+}
+.hero::before{
+  content:""; position:absolute; inset:0;
+  background: var(--hero, none) center/cover no-repeat;
+  transform:scale(1.06); filter:contrast(1.1) brightness(.9);
+}
+.hero__overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.8))}
+.hero__content{position:relative; text-align:center}
+.title{
+  font-family:"Playfair Display", serif;
+  font-weight:800; font-size:clamp(36px, 7vw, 74px);
+  color:var(--gold); margin:0 0 10px;
+  letter-spacing:.2px;
+}
+.subtitle{font-size:clamp(16px, 2.4vw, 20px); color:#d9d9d9; margin:0 0 24px}
+
+.btn{
+  display:inline-block; padding:12px 18px; border-radius:12px;
+  border:1px solid transparent; text-decoration:none; font-weight:700;
+}
+.btn--gold{background:var(--gold); color:#0e0e0e}
+.btn--outline{border-color:var(--gold); color:var(--gold); background:transparent}
+.btn--outline:hover{background:rgba(212,175,55,.08)}
+
+.section-title{
+  font-family:"Playfair Display", serif; color:var(--gold);
+  font-size:clamp(26px, 4vw, 40px); margin:0 0 12px;
+}
+.h3{margin:0 0 8px; font-size:20px}
+.body{color:#e9e9e9}
+.lead{font-size:20px; color:#efefef}
+
+.grid-2{display:grid; gap:28px; grid-template-columns:1fr; align-items:center}
+@media (min-width:960px){ .grid-2{grid-template-columns:1.05fr .95fr} }
+
+.card{
+  background:var(--card); border:1px solid rgba(255,255,255,.06);
+  border-radius:16px; overflow:hidden;
+  box-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+.card img{width:100%; height:auto; display:block}
+.card.photo figcaption{padding:12px 14px; color:var(--muted); font-size:14px}
+
+.list{margin:0; padding-left:18px}
+.list li{margin:6px 0}
+
+.tip{margin-top:10px; color:var(--muted); font-size:14px}
+
+.lotr-diagram .demo-wrap{display:flex; gap:10px; margin-top:12px}
+.demo{width:calc(50% - 5px); border-radius:12px; border:1px solid rgba(255,255,255,.08); object-fit:cover}
+
+.cards{
+  display:grid; gap:20px; grid-template-columns:1fr; margin-top:20px;
+}
+@media (min-width:900px){ .cards{grid-template-columns:repeat(3, 1fr)} }
+.feature img{aspect-ratio:16/10; object-fit:cover}
+.feature__content{padding:16px}
+.feature__content .body{color:#dcdcdc}
+
+.quote{
+  margin:10px auto 0; padding:18px 22px; border-left:4px solid var(--gold);
+  background:rgba(255,255,255,.03); border-radius:8px;
+  font-family:"Playfair Display", serif; font-size:22px; color:#f0f0f0;
+}
+
+.footer{padding:32px 0; background:#000; border-top:1px solid rgba(255,255,255,.06)}
+.small{font-size:12.5px; color:#cfcfcf; text-align:center}
+
+.to-top{
+  position:fixed; right:16px; bottom:16px; width:44px; height:44px;
+  border-radius:50%; background:rgba(212,175,55,.95); color:#111; border:none;
+  font-weight:800; box-shadow:0 10px 30px rgba(0,0,0,.5); cursor:pointer; display:none;
+}
+
+/* 등장 애니메이션 */
+.reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
+.reveal.show{opacity:1; transform:none}
+.delay-1{transition-delay:.12s}
+.delay-2{transition-delay:.24s}
